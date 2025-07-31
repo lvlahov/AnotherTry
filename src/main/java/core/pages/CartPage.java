@@ -41,7 +41,6 @@ public class CartPage {
     public static void checkOut() {
         WebElement checkoutButton = Browser.driver.findElement(By.id("checkout"));
         checkoutButton.click();
-        someChange
     }
 }
 
