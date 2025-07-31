@@ -1,5 +1,6 @@
 package core.pages;
 
+import base.tests.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -7,11 +8,20 @@ import utils.Browser;
 
 import java.util.List;
 
-public class CartPage {
+public class CartPage extends BasePage {
+
+    private final static By CART_PAGE_TITLE = By.className("title");
+
+    private final static By REMOVE_BACKPACK_BUTTON = By.id("remove-sauce-labs-backpack");
+
+    private final static By REMOVE_TSHIRT_BUTTON = By.id("remove-sauce-labs-bolt-t-shirt");
+
+    private final static By CHECKOUT_BUTTON = By.id("checkout)");
+
 
     public static void verifyUserIsOnTheCartPage(String expectedHeader, String messageOnFailure) {
         WebElement pageTitle = Browser.driver.findElement(By.className("title"));
-        String actualHeader = pageTitle.getText();
+        String actualHeader = getText(CART_PAGE_TITLE);
         Assert.assertEquals(actualHeader, expectedHeader, messageOnFailure);
 
 
@@ -27,20 +37,17 @@ public class CartPage {
     }
 
     public static void removeTheBackPack() {
-        WebElement removeBackBackButton = Browser.driver.findElement(By.id("remove-sauce-labs-backpack"));
-        removeBackBackButton.click();
+        click(REMOVE_BACKPACK_BUTTON);
     }
 
     public static void removeTheTshirt() {
-        WebElement removeTShirtButton = Browser.driver.findElement(By.id("remove-sauce-labs-bolt-t-shirt"));
-        removeTShirtButton.click();
+     click(REMOVE_TSHIRT_BUTTON);
 
     }
 
 
     public static void checkOut() {
-        WebElement checkoutButton = Browser.driver.findElement(By.id("checkout"));
-        checkoutButton.click();
+       click(CHECKOUT_BUTTON);
     }
 }
 
