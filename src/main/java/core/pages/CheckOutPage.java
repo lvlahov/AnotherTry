@@ -13,9 +13,10 @@ public class CheckOutPage extends BasePage {
     private final static By ZIP_FIELD = By.id("postal-code");
     private final static By SUBMIT_BUTTON = By.id("continue");
 
+    private final static By PAGE_TITLE = By.xpath("//span[text() = 'Checkout: Your Information']");
+
     public static void verifyUserIsOnCheckOutPage(String expectedHeader, String messageOnFailure) {
-        WebElement pageTitle = Browser.driver.findElement(By.xpath("//span[text() = 'Checkout: Your Information']"));
-        String actualHeader = pageTitle.getText();
+        String actualHeader = getText(PAGE_TITLE);
         Assert.assertEquals(actualHeader, expectedHeader, messageOnFailure);
 
     }
