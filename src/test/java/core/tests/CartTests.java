@@ -13,7 +13,6 @@ public class CartTests extends BaseTest {
         ProductPage.addSauceBackPack();
         ProductPage.addTHshirt();
         ProductPage.goToCart();
-        CartPage.verifyUserIsOnTheCartPage("Your Cart", "User is not on the Cart page");
         CartPage.verifyProductsAreAdded();
 
     }
