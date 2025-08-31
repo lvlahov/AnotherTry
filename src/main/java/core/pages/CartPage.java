@@ -10,7 +10,7 @@ import java.util.List;
 
 public class CartPage extends BasePage {
 
-    private final static By CART_PAGE_TITLE = By.className("title");
+    private final static By CART_PAGE_TITLE = By.xpath("//span[@data-test = 'title']");
 
     private final static By REMOVE_BACKPACK_BUTTON = By.id("remove-sauce-labs-backpack");
 
@@ -36,7 +36,8 @@ public class CartPage extends BasePage {
 
     }
 
-    public static void removeTheBackPack() {
+    public static void removeTheBackPack() throws InterruptedException {
+        Thread.sleep(1000);
         click(REMOVE_BACKPACK_BUTTON);
     }
 

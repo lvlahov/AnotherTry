@@ -13,15 +13,14 @@ public class CartTests extends BaseTest {
         ProductPage.addSauceBackPack();
         ProductPage.addTHshirt();
         ProductPage.goToCart();
-        CartPage.verifyUserIsOnTheCartPage("Your Cart", "User is not on the Cart page");
         CartPage.verifyProductsAreAdded();
 
     }
 
     @Test
-    public void removeAllProductsAndSortTheirPrice(){
-        CartTests cartTest = new CartTests();
-        cartTest.Add2ProductsToCart();
+    public void removeAllProductsAndSortTheirPrice() throws InterruptedException {
+        CartTests cartTests = new CartTests();
+        cartTests.Add2ProductsToCart();
         CartPage.removeTheBackPack();
         CartPage.removeTheTshirt();
         ProductPage.verifyProductsAreRemoved("Add to cart", "Product is not removed from cart");

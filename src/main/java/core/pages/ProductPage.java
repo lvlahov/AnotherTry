@@ -27,6 +27,7 @@ public class ProductPage {
 
     public static void addSauceBackPack() {
         WebElement addBackPackToCartButton = Browser.driver.findElement(By.id("add-to-cart-sauce-labs-backpack"));
+
         addBackPackToCartButton.click();
 
     }
