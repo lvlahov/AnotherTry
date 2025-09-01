@@ -36,8 +36,8 @@ public class CartPage extends BasePage {
 
     }
 
-    public static void removeTheBackPack() throws InterruptedException {
-        Thread.sleep(1000);
+    public static void removeTheBackPack(){
+
         click(REMOVE_BACKPACK_BUTTON);
     }
 
