@@ -18,7 +18,7 @@ public class CartTests extends BaseTest {
     }
 
     @Test
-    public void removeAllProductsAndSortTheirPrice() throws InterruptedException {
+    public void removeAllProductsAndSortTheirPrice(){
         CartTests cartTests = new CartTests();
         cartTests.Add2ProductsToCart();
         CartPage.removeTheBackPack();
