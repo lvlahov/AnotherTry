@@ -1,4 +1,4 @@
-package base.tests;
+package base.pages;
 
 import org.openqa.selenium.By;
 import utils.Browser;

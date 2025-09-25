@@ -1,10 +1,8 @@
 package components;
 
-import base.tests.BasePage;
+import base.pages.BasePage;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import utils.Browser;
 
 public class Header extends BasePage {
 

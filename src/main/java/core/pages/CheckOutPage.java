@@ -1,6 +1,6 @@
 package core.pages;
 
-import base.tests.BasePage;
+import base.pages.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
