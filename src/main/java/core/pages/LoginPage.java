@@ -1,12 +1,10 @@
 package core.pages;
 
-import base.tests.BasePage;
+import base.pages.BasePage;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import utils.Browser;
 
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class LoginPage extends BasePage {
