@@ -4,12 +4,14 @@ import base.tests.BaseTest;
 import components.Header;
 import core.pages.LoginPage;
 import core.pages.ProductPage;
+import io.cucumber.java.en.Given;
 import org.testng.annotations.Test;
 
 public class LoginTest extends BaseTest {
 
 
     @Test
+    @Given("I login")
     public void standartLogin(){
         LoginPage.goTo();
         LoginPage.login("standard_user", "secret_sauce");
